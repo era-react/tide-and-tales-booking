@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Azure Cove Resort | Book Your Stay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Azure Cove Resort home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>Azure Cove <small>RESORT & SPA</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#experience">The Experience</a>
+        <a href="#rooms">Rooms & Suites</a>
+        <a class="nav-cta" href="#booking">Book your stay</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">A slower kind of seaside</p>
+          <h1 id="hero-title">Your coast.<br />Your time.</h1>
+          <p class="hero-description">Find your place by the water. Explore our rooms and plan a stay made for unwinding.</p>
+          <a class="button button-light" href="#booking">Check availability <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-caption"><span>01</span> Wake up somewhere wonderful</div>
+      </section>
+
+      <section class="experience section-wrap" id="experience">
+        <div>
+          <p class="eyebrow">Welcome to Azure Cove</p>
+          <h2>Room to breathe.<br />Time to reconnect.</h2>
+        </div>
+        <p class="experience-copy">A peaceful coastal hideaway for sunlit mornings, long lunches, and evenings beside the sea. Choose a room that feels like yours, then leave the details to us.</p>
+      </section>
+
+      <section class="rooms section-wrap" id="rooms">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Stay a little longer</p>
+            <h2>Find your room</h2>
+          </div>
+          <a class="text-link" href="#booking">Plan your stay <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="room-grid">
+          <article class="room-card room-deluxe">
+            <div class="room-art" aria-hidden="true"><span>01 / 04</span></div>
+            <div class="room-card-copy"><h3>Deluxe Suite</h3><a href="#booking" aria-label="Book the Deluxe Suite">Explore & book <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="room-card room-ocean">
+            <div class="room-art" aria-hidden="true"><span>02 / 04</span></div>
+            <div class="room-card-copy"><h3>Ocean View Villa</h3><a href="#booking" aria-label="Book the Ocean View Villa">Explore & book <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="room-card room-family">
+            <div class="room-art" aria-hidden="true"><span>03 / 04</span></div>
+            <div class="room-card-copy"><h3>Family Suite</h3><a href="#booking" aria-label="Book the Family Suite">Explore & book <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking-section" id="booking">
+        <div class="booking-intro">
+          <p class="eyebrow">Make yourself at home</p>
+          <h2>Let's plan your<br />coastal escape.</h2>
+          <p>Share a few details and we’ll check availability for your stay.</p>
+          <div class="booking-note"><span aria-hidden="true">✳</span><span>Have a special request? There’s space to let us know.</span></div>
+        </div>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-header">
+            <div><p class="eyebrow">Your reservation</p><h3>Book your stay</h3></div>
+            <span class="step-indicator">01 <span>/ 01</span></span>
+          </div>
+
+          <fieldset>
+            <legend>Guest details</legend>
+            <div class="form-grid two-col">
+              <label>
+                <span>Full name <b aria-hidden="true">*</b></span>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name" required />
+                <small class="field-error"></small>
+              </label>
+              <label>
+                <span>Email address <b aria-hidden="true">*</b></span>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+                <small class="field-error"></small>
+              </label>
+              <label class="full-width">
+                <span>Phone number <b aria-hidden="true">*</b></span>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" required />
+                <small class="field-error"></small>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your stay</legend>
+            <div class="form-grid two-col">
+              <label>
+                <span>Check-in <b aria-hidden="true">*</b></span>
+                <input type="date" id="checkIn" name="checkIn" required />
+                <small class="field-error"></small>
+              </label>
+              <label>
+                <span>Check-out <b aria-hidden="true">*</b></span>
+                <input type="date" id="checkOut" name="checkOut" required />
+                <small class="field-error"></small>
+              </label>
+              <label>
+                <span>Room selection <b aria-hidden="true">*</b></span>
+                <select id="room" name="room" required>
+                  <option value="">Choose a room</option>
+                  <option value="Deluxe Suite">Deluxe Suite</option>
+                  <option value="Ocean View Villa">Ocean View Villa</option>
+                  <option value="Standard Room">Standard Room</option>
+                  <option value="Family Suite">Family Suite</option>
+                </select>
+                <small class="field-error"></small>
+              </label>
+              <div class="guest-count">
+                <span class="group-label">Guests <b aria-hidden="true">*</b></span>
+                <div class="form-grid two-col">
+                  <label>
+                    <span>Adults</span>
+                    <input type="number" id="adults" name="adults" min="1" max="12" value="2" required />
+                    <small class="field-error"></small>
+                  </label>
+                  <label>
+                    <span>Children</span>
+                    <input type="number" id="children" name="children" min="0" max="12" value="0" />
+                    <small class="field-error"></small>
+                  </label>
+                </div>
+              </div>
+              <label class="full-width">
+                <span>Special requests <small class="optional">(optional)</small></span>
+                <textarea id="notes" name="notes" rows="3" placeholder="Anything that would make your stay extra special?"></textarea>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="action-row">
+            <button type="submit" class="button button-dark">Check availability <span aria-hidden="true">→</span></button>
+            <button type="reset" class="reset-button">Clear form</button>
+          </div>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+          <p class="privacy-note">Your details are only used to help with your reservation request.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">A</span><span>Azure Cove <small>RESORT & SPA</small></span></a>
+      <p>Take the scenic route.</p>
+      <a class="text-link" href="#booking">Book your stay <span aria-hidden="true">↑</span></a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
